@@ -1,0 +1,610 @@
+:root {
+  --background: linear-gradient(45deg, #110329, #101686, #262bbd);
+  --font-color: #13198f;
+  --secondary-font-color: white;
+  --secondary-background-color: white
+};
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body.light-theme {
+  background: var(--secondary-background-color);
+}
+
+body.dark-theme  {
+  background: var(--background);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Figtree', sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 100;
+  box-shadow: 5px 5px 10px black;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#light nav { 
+  background: var(--background);
+}
+
+#dark nav { 
+  background: var(--secondary-background-color);
+}
+
+.reactSwitch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.reactSwitch span {
+  margin-right: 10px;
+}
+
+#light .reactSwitch {
+  color: var(--secondary-background-color);
+}
+
+#dark .reactSwitch {
+  color: var(--font-color);
+}
+
+/* IMG LOGO AND AVATAR */
+
+.img-box { 
+  display: flex;
+}
+
+.img-box div {
+  font-weight: 800;
+  margin-left: 30px;
+  margin-top: 17px;
+  font-size: 15px;
+  line-height: 19.5px;
+}
+
+.img-box .loggedClass {
+  top: -15px;
+  display: flex;
+  position: absolute;
+  right: 15px;
+
+}
+
+.img-box .avatarImg {
+  margin-top: 5px;
+  margin-left: 25px;
+  width: 73px;
+  height: 59px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.img-box .logoImg {
+  margin-left: 25px;
+    margin-bottom: 1px;
+    width: 122px;
+    height: 67px;
+    border-radius: 50%;
+}
+
+.loginBtnClass button {
+  margin-right: 30px;
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+#light .loginBtnClass button {
+  background: var(--secondary-background-color);
+  color: var(--font-color);
+  border: 2px solid var(--font-color)
+}
+
+#dark .loginBtnClass button {
+  background: var(--background);
+  color: var(--secondary-font-color);
+}
+
+
+#dark .loginBtnClass button:hover {
+  background: var(--secondary-background-color);
+  color: var(--font-color);
+  border: 2px solid var(--font-color)
+}
+
+#light .loginBtnClass button:hover {
+  background: var(--background);
+  color: var(--secondary-font-color);
+  border: 2px solid var(--secondary-font-color)
+}
+
+.loginContainer {
+  font-size: 25px;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px black;
+}
+
+#light .loginContainer {
+  color: var(--secondary-font-color);
+  background: var(--background);
+  border: none
+}
+
+#dark .loginContainer {
+  color: var(--font-color);
+  background-color: var(--secondary-background-color);
+  border: 2px solid white;
+}
+
+.loginContainer input {
+  border: 2px solid var(--font-color);
+  color: var(--font-color)
+}
+
+.loginContainer button {
+  margin-right: 30px;
+  margin-bottom: 20px;
+  width: 120px;
+  height: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+}
+
+#light .loginContainer button {
+  background: var(--secondary-background-color);
+  color: var(--font-color);
+}
+
+#dark .loginContainer button {
+  background: var(--background);
+  color: var(--secondary-font-color);
+}
+
+
+#dark .loginContainer button:hover {
+  color: var(--font-color);
+  border: 2px solid var(--font-color);
+  background: var(--secondary-background-color);
+}
+
+#light .loginContainer button:hover {
+  color: var(--secondary-font-color);
+  border: 2px solid var(--secondary-font-color);
+  background: var(--background);
+}
+
+.loginContainer div {
+  margin-top: 10px;
+}
+
+.loginContainer label {
+  padding: 0 30px;
+}
+
+.loginContainer input {
+  height: 30px;
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.loginContainer span {
+  margin-left: 93px;
+  font-size: 18px;
+}
+
+/* SPINNER */
+
+.spinner {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+}
+
+.spinner div {
+  position: absolute;
+  width: 50%;
+  height: 150%;
+  background: #474bff;
+  transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
+  animation: spinner-fzua35 1s calc(var(--delay) * 1s) infinite ease;
+}
+
+.spinner div:nth-child(1) {
+  --delay: 0.1;
+  --rotation: 36;
+  --translation: 150;
+}
+
+.spinner div:nth-child(2) {
+  --delay: 0.2;
+  --rotation: 72;
+  --translation: 150;
+}
+
+.spinner div:nth-child(3) {
+  --delay: 0.3;
+  --rotation: 108;
+  --translation: 150;
+}
+
+.spinner div:nth-child(4) {
+  --delay: 0.4;
+  --rotation: 144;
+  --translation: 150;
+}
+
+.spinner div:nth-child(5) {
+  --delay: 0.5;
+  --rotation: 180;
+  --translation: 150;
+}
+
+.spinner div:nth-child(6) {
+  --delay: 0.6;
+  --rotation: 216;
+  --translation: 150;
+}
+
+.spinner div:nth-child(7) {
+  --delay: 0.7;
+  --rotation: 252;
+  --translation: 150;
+}
+
+.spinner div:nth-child(8) {
+  --delay: 0.8;
+  --rotation: 288;
+  --translation: 150;
+}
+
+.spinner div:nth-child(9) {
+  --delay: 0.9;
+  --rotation: 324;
+  --translation: 150;
+}
+
+.spinner div:nth-child(10) {
+  --delay: 1;
+  --rotation: 360;
+  --translation: 150;
+}
+
+@keyframes spinner-fzua35 {
+  0%, 10%, 20%, 30%, 50%, 60%, 70%, 80%, 90%, 100% {
+     transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
+  }
+
+  50% {
+     transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1.5%));
+  }
+}
+
+/* PRODUCTS */
+
+.productsContent {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.productsContent img {
+  width: 200px;
+  cursor: pointer;
+}
+
+.productsContent {
+  margin-top: 50px;
+}
+
+#light .productsContent {
+  color: var(--font-color)
+}
+
+#dark .productsContent {
+  color: var(--secondary-font-color);
+}
+
+#dark .myProfileClass {
+  color: var(--secondary-font-color);
+}
+
+#light .myProfileClass {
+  color: var(--font-color);
+}
+
+.myProfileClass p {
+  padding: 10px;
+}
+
+.myProfileClass button {
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  margin-top: 80px;
+  font-weight: 700;
+}
+
+#light .myProfileClass button {
+  color: var(--font-color);
+  border: 2px solid var(--font-color);
+}
+
+#light .myProfileClass button:hover {
+  color: var(--secondary-font-color);
+  background: var(--background);
+}
+
+#dark .myProfileClass button {
+  color: var(--font-color);
+}
+
+#dark .myProfileClass button:hover {
+  color: var(--secondary-font-color);
+  background: var(--background);
+  border: 2px solid var(--secondary-font-color)
+}
+
+.singleProductClass {
+  margin: 70px auto;
+}
+
+#light .singleProductClass {
+  color: var(--font-color)
+}
+
+#dark .singleProductClass {
+  color: var(--secondary-font-color);
+}
+
+
+.singleProductClass p:nth-child(3) {
+  text-align: center;
+}
+
+.singleProductClass p {
+  padding: 5px;
+  text-align: left;
+}
+
+.singleProductClass span {
+  position: absolute;
+  left: 45%;
+  text-decoration: underline;
+}
+
+.singleProductClass button {
+  margin-right: 30px;
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+#light .singleProductClass button {
+  background: var(--background);
+  color: var(--secondary-font-color);
+  border: 2px solid var(--secondary-font-color);
+}
+
+#dark .singleProductClass button {
+  background: var(--secondary-background-color);
+  color: var(--font-color);
+}
+
+#dark .singleProductClass button:hover {
+  color: var(--secondary-font-color);
+  border: 2px solid white;
+  background: var(--background);
+}
+
+#light .singleProductClass button:hover {
+  color: var(--font-color);
+  border: 2px solid var(--font-color);
+  background: var(--secondary-background-color);
+}
+
+/* DropDown menu */
+
+.menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 36px;
+  width: 200px;
+  min-height: 100px;
+  background: var(--secondary-background-color);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: 300ms;
+}
+
+.menu::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: 14px;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+#light .menu::before {
+  background: #262bbd
+}
+
+#dark .menu::before {
+  background: var(--secondary-background-color);
+}
+
+.menu.active {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+
+}
+
+#light .menu.active {
+  background: var(--background);
+}
+
+/* menu links */
+
+ul li {
+  list-style: none;
+}
+
+.menu ul li:hover {
+  background: #eee;
+}
+
+#light .menu ul li:hover {
+  color: var(--font-color);
+}
+
+#dark .menu ul li:hover {
+  background: var(--background);
+  color: var(--secondary-font-color);
+}
+
+ul li {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  gap: 20px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+#light ul li {
+  color: var(--secondary-font-color);
+}
+
+#dark ul li {
+  color: var(--font-color);
+}
+
+
+/* PAGINATION */
+
+.paginationClass span{
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+#light .paginationClass span {
+  color: var(--font-color);
+}
+
+#dark .paginationClass span {
+  color: var(--secondary-font-color);
+}
+
+.paginationClass button {
+  margin: 25px;
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+}
+
+#light .paginationClass button {
+  background: var(--background);
+  color: var(--secondary-font-color);
+  border: var(--secondary-font-color);
+}
+
+#dark .paginationClass button {
+  background: var(--secondary-background-color);
+  color: var(--font-color);
+}
+
+#dark .paginationClass button:hover {
+  background: var(--background);
+  color: var(--secondary-font-color);
+  border: 1px solid white
+}
+
+#light .paginationClass button:hover {
+  background: var(--secondary-background-color);
+  color: var(--font-color);
+  border: 2px solid var(--font-color);
+}
+
+/* SEARCH COMPONENT */
+
+.searchComponent input {
+  position: absolute;
+  left: 35px;
+  top: 92px;
+  border-radius: 20px;
+  border: none;
+  height: 25px;
+  padding: 10px;
+  padding-left: 30px;
+}
+
+#dark .searchComponent input {
+  color: var(--font-color)
+}
+
+#light .searchComponent input {
+  border: 2px solid var(--font-color)
+}
+
+.searchComponent input::placeholder {
+  color: var(--font-color);
+}
+
+.searchIcon {
+  z-index: 10;
+  position: absolute;
+  left: 42px;
+  top: 97px;
+  width: 13px;
+}
