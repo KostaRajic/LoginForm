@@ -15,6 +15,8 @@ export const Products = () => {
     const { state, dispatch } = useContextAuth()
 
 
+
+
     useEffect(() => {
         async function getProducts() {
             let url = searchQuery ?  'https://dummyjson.com/products/search': `https://dummyjson.com/products`

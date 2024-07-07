@@ -68,6 +68,7 @@ export const UseContextProvider = ({children}) => {
 
     const loggedUser = useMemo(() => state?.isLoggedIn, [state?.isLoggedIn])
     const role = useMemo(() => state?.user?.role, [state.user]);
+
     const login = async (username, password) => {
       dispatch({type: 'LOADING', payload: true})
         try {
@@ -109,9 +110,6 @@ export const UseContextProvider = ({children}) => {
        localStorage.setItem('token', token);
     }
     
-    useEffect(() => {
-      state.user && localStorage.setItem('user', state.user)
-    }, [])
 
     return <div>
         <Context.Provider value={{ login, logout, state, dispatch, isAuthenticated, role, theme, setTheme, loggedUser }}>
