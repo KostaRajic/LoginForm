@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
 :root {
@@ -7,13 +8,26 @@
   --secondary-background-color: white;
   --font-primary: "Faculty Glyphic", sans-serif;
 }
+=======
+:root {
+  --background: #004500;
+  --font-color: #004500;
+  --secondary-font-color: #229a22;
+  --secondary-background-color: #229a22;
+};
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
+<<<<<<< HEAD
 }
 
+=======
+
+}
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 a:hover {
   color: #535bf2;
 }
@@ -24,13 +38,21 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+<<<<<<< HEAD
+=======
+  transition: all 0.3s;
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 body.light-theme {
   background: var(--secondary-background-color);
 }
 
+<<<<<<< HEAD
 body.dark-theme {
+=======
+body.dark-theme  {
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
   background: var(--background);
 }
 
@@ -38,7 +60,11 @@ body.dark-theme {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+<<<<<<< HEAD
   font-family: var(--font-primary);
+=======
+  font-family: 'Figtree', sans-serif;
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 nav {
@@ -55,11 +81,19 @@ nav {
   align-items: center;
 }
 
+<<<<<<< HEAD
 #light nav {
   background: var(--background);
 }
 
 #dark nav {
+=======
+#light nav { 
+  background: var(--background);
+}
+
+#dark nav { 
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
   background: var(--secondary-background-color);
 }
 
@@ -67,6 +101,10 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 .reactSwitch span {
@@ -81,6 +119,7 @@ nav {
   color: var(--font-color);
 }
 
+<<<<<<< HEAD
 .landingImageClass {
   width: 1000px;
   height: 500px;
@@ -89,6 +128,11 @@ nav {
 /* IMG LOGO AND AVATAR */
 
 .img-box {
+=======
+/* IMG LOGO AND AVATAR */
+
+.img-box { 
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
   display: flex;
 }
 
@@ -98,6 +142,14 @@ nav {
   margin-top: 17px;
   font-size: 15px;
   line-height: 19.5px;
+<<<<<<< HEAD
+=======
+  color: var(--secondary-font-color);
+}
+
+#dark .img-box div {
+  color: var(--font-color)
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 .img-box .loggedClass {
@@ -107,6 +159,13 @@ nav {
   right: 15px;
 }
 
+<<<<<<< HEAD
+=======
+.loggedClass div p {
+  font-size: 18px;
+}
+
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 .img-box .avatarImg {
   margin-top: 5px;
   margin-left: 25px;
@@ -118,10 +177,17 @@ nav {
 
 .img-box .logoImg {
   margin-left: 25px;
+<<<<<<< HEAD
   margin-bottom: 1px;
   width: 122px;
   height: 67px;
   border-radius: 50%;
+=======
+    margin-bottom: 1px;
+    width: 122px;
+    height: 67px;
+    border-radius: 50%;
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 .loginBtnClass button {
@@ -136,7 +202,10 @@ nav {
 #light .loginBtnClass button {
   background: var(--secondary-background-color);
   color: var(--font-color);
+<<<<<<< HEAD
   border: 2px solid var(--font-color);
+=======
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 #dark .loginBtnClass button {
@@ -144,16 +213,28 @@ nav {
   color: var(--secondary-font-color);
 }
 
+<<<<<<< HEAD
 #dark .loginBtnClass button:hover {
   background: var(--secondary-background-color);
   color: var(--font-color);
   border: 2px solid var(--font-color);
+=======
+
+#dark .loginBtnClass button:hover {
+  background: var(--secondary-background-color);
+  color: var(--font-color);
+  border: 2px solid var(--font-color)
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 #light .loginBtnClass button:hover {
   background: var(--background);
   color: var(--secondary-font-color);
+<<<<<<< HEAD
   border: 2px solid var(--secondary-font-color);
+=======
+  border: 2px solid var(--secondary-font-color)
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 .loginContainer {
@@ -161,6 +242,7 @@ nav {
   border-radius: 20px;
   padding: 20px;
   box-shadow: 5px 5px 10px black;
+<<<<<<< HEAD
   margin: 20px auto 40px auto;
 }
 
@@ -170,23 +252,40 @@ nav {
 
 .loginContainer div {
   margin: 20px;
+=======
+}
+
+.loginContainer  h2{
+  margin: 14px auto 28px auto;
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 #light .loginContainer {
   color: var(--secondary-font-color);
   background: var(--background);
+<<<<<<< HEAD
   border: none;
+=======
+  border: none
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 #dark .loginContainer {
   color: var(--font-color);
   background-color: var(--secondary-background-color);
+<<<<<<< HEAD
   border: 2px solid white;
+=======
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 .loginContainer input {
   border: 2px solid var(--font-color);
+<<<<<<< HEAD
   color: var(--font-color);
+=======
+  color: var(--font-color)
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 .loginContainer button {
@@ -210,6 +309,10 @@ nav {
   color: var(--secondary-font-color);
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 #dark .loginContainer button:hover {
   color: var(--font-color);
   border: 2px solid var(--font-color);
@@ -222,8 +325,17 @@ nav {
   background: var(--background);
 }
 
+<<<<<<< HEAD
 .loginContainer label {
   padding: 0 30px 0 0;
+=======
+.loginContainer div {
+  margin-top: 10px;
+}
+
+.loginContainer label {
+  padding: 0 30px;
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 .loginContainer input {
@@ -234,10 +346,15 @@ nav {
 }
 
 .loginContainer span {
+<<<<<<< HEAD
   margin-left: 60px;
   font-size: 16px;
   color: indianred;
   font-weight: 700;
+=======
+  margin-left: 93px;
+  font-size: 18px;
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 /* SPINNER */
@@ -253,8 +370,12 @@ nav {
   width: 50%;
   height: 150%;
   background: #474bff;
+<<<<<<< HEAD
   transform: rotate(calc(var(--rotation) * 1deg))
     translate(0, calc(var(--translation) * 1%));
+=======
+  transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
   animation: spinner-fzua35 1s calc(var(--delay) * 1s) infinite ease;
 }
 
@@ -319,6 +440,7 @@ nav {
 }
 
 @keyframes spinner-fzua35 {
+<<<<<<< HEAD
   0%,
   10%,
   20%,
@@ -336,6 +458,14 @@ nav {
   50% {
     transform: rotate(calc(var(--rotation) * 1deg))
       translate(0, calc(var(--translation) * 1.5%));
+=======
+  0%, 10%, 20%, 30%, 50%, 60%, 70%, 80%, 90%, 100% {
+     transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
+  }
+
+  50% {
+     transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1.5%));
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
   }
 }
 
@@ -344,7 +474,11 @@ nav {
 .productsContent {
   display: flex;
   flex-wrap: wrap;
+<<<<<<< HEAD
   justify-content: center;
+=======
+  margin-top: 70px;
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 .productsContent img {
@@ -352,6 +486,7 @@ nav {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 .productsContent p:last-child {
   background-color: white;
   overflow: hidden;
@@ -400,6 +535,10 @@ nav {
 
 #light .productsContent {
   color: var(--font-color);
+=======
+#light .productsContent {
+  color: var(--font-color)
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 #dark .productsContent {
@@ -414,6 +553,7 @@ nav {
   color: var(--font-color);
 }
 
+<<<<<<< HEAD
 .myProfileClass strong {
   padding-left: 30px;
 }
@@ -427,6 +567,10 @@ margin: 0 auto;
   justify-content: left;
 
   margin: 20px;
+=======
+.myProfileClass p {
+  padding: 10px;
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 .myProfileClass button {
@@ -435,7 +579,11 @@ margin: 0 auto;
   border-radius: 20px;
   cursor: pointer;
   border: none;
+<<<<<<< HEAD
 
+=======
+  margin-top: 80px;
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
   font-weight: 700;
 }
 
@@ -456,6 +604,7 @@ margin: 0 auto;
 #dark .myProfileClass button:hover {
   color: var(--secondary-font-color);
   background: var(--background);
+<<<<<<< HEAD
   border: 2px solid var(--secondary-font-color);
 }
 
@@ -482,6 +631,9 @@ margin: 0 auto;
   position: absolute;
   height: 100%;
   background: blue;
+=======
+  border: 2px solid var(--secondary-font-color)
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 .singleProductClass {
@@ -489,18 +641,27 @@ margin: 0 auto;
 }
 
 #light .singleProductClass {
+<<<<<<< HEAD
   color: var(--font-color);
+=======
+  color: var(--font-color)
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 #dark .singleProductClass {
   color: var(--secondary-font-color);
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 .singleProductClass p:nth-child(3) {
   text-align: center;
 }
 
 .singleProductClass p {
+<<<<<<< HEAD
   padding: 29px;
   text-align: left;
   font-size: 25px;
@@ -514,6 +675,10 @@ margin: 0 auto;
 
 .singleProductClass p span {
   font-size: 20px;
+=======
+  padding: 5px;
+  text-align: left;
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 .singleProductClass span {
@@ -565,7 +730,11 @@ margin: 0 auto;
   width: 200px;
   min-height: 100px;
   background: var(--secondary-background-color);
+<<<<<<< HEAD
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+=======
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
   opacity: 0;
   transform: translateY(-10px);
   visibility: hidden;
@@ -573,7 +742,11 @@ margin: 0 auto;
 }
 
 .menu::before {
+<<<<<<< HEAD
   content: "";
+=======
+  content: '';
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
   position: absolute;
   top: -10px;
   right: 14px;
@@ -584,7 +757,11 @@ margin: 0 auto;
 }
 
 #light .menu::before {
+<<<<<<< HEAD
   background: #262bbd;
+=======
+  background: #262bbd
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 #dark .menu::before {
@@ -595,6 +772,10 @@ margin: 0 auto;
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 #light .menu.active {
@@ -638,9 +819,16 @@ ul li {
   color: var(--font-color);
 }
 
+<<<<<<< HEAD
 /* PAGINATION */
 
 .paginationClass span {
+=======
+
+/* PAGINATION */
+
+.paginationClass span{
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
   font-size: 18px;
   margin-right: 10px;
 }
@@ -663,12 +851,15 @@ ul li {
   font-weight: 700;
 }
 
+<<<<<<< HEAD
 .paginationClass button:disabled {
   background-color: #c0c0c0;
   cursor: not-allowed;
   opacity: 0.6;
 }
 
+=======
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 #light .paginationClass button {
   background: var(--background);
   color: var(--secondary-font-color);
@@ -683,7 +874,11 @@ ul li {
 #dark .paginationClass button:hover {
   background: var(--background);
   color: var(--secondary-font-color);
+<<<<<<< HEAD
   border: 1px solid white;
+=======
+  border: 1px solid white
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 #light .paginationClass button:hover {
@@ -694,6 +889,7 @@ ul li {
 
 /* SEARCH COMPONENT */
 
+<<<<<<< HEAD
 .searchComponent {
   position: relative;
 }
@@ -708,10 +904,25 @@ ul li {
   padding-left: 50px;
   font-size: 20px;
   font-weight: 500;
+=======
+.searchComponent input {
+  position: absolute;
+  left: 35px;
+  top: 100px;
+  border-radius: 20px;
+  border: none;
+  height: 30px;
+  padding: 10px;
+  padding-left: 30px;
+  font-size: 18px;
+  background-color: var(--background);
+  color: var(--secondary-font-color);
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 }
 
 #dark .searchComponent input {
   color: var(--font-color);
+<<<<<<< HEAD
 }
 
 #light .searchComponent input {
@@ -719,10 +930,21 @@ ul li {
 }
 
 .searchComponent input::placeholder {
+=======
+  background-color: var(--secondary-background-color);
+}
+
+.searchComponent input::placeholder {
+  color: var(--secondary-font-color);
+}
+
+#dark .searchComponent input::placeholder {
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
   color: var(--font-color);
 }
 
 .searchIcon {
+<<<<<<< HEAD
   height: 20px;
   position: absolute;
   top: 85px;
@@ -781,6 +1003,82 @@ ul li {
 
   .progress-bar-container {
     width: 45%;
+=======
+  z-index: 10;
+  position: absolute;
+  left: 43px;
+  top: 107px;
+  width: 15px;
+}
+
+.light-dark-mode {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.light-dark-mode:active {
+  transform: scale(1.7);
+}
+
+/* NotSubmitPortal */
+
+.notSubmitMainContainer {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.notSubmitContainer {
+  width: 200px;
+  height: 200px;
+  background-color: var(--background);
+  border-radius: 20%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.notSubmitContainer .errorClass {
+  width: 70px;
+  height: 70px;
+  margin: 40px auto 0 auto;
+  color: red;
+}
+
+.notSubmitContainer p {
+  margin: 10px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.notSubmitContainer .closeBtn {
+  height: 20px;
+  width: 20px;
+  right: 20px;
+  position: absolute;
+  top: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 320px) {
+  .img-box .logoImg {
+    margin-left: 0;
+    width: 80px;
+  }
+  .reactSwitch span {
+    display: none;
+  }
+
+  .light-dark-mode {
+    margin-left: -57px;
+>>>>>>> 46ae12a624a837fa231610799c234841d37efa47
   }
 
 }
