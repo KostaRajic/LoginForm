@@ -1,15 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
 :root {
-  --background: linear-gradient(45deg, #110329, #101686, #262bbd);
-  --font-color: #13198f;
+  --background: black;
+  --font-color: black;
   --secondary-font-color: white;
-  --secondary-background-color: white
-};
+  --secondary-background-color: white;
+  --font-primary: "Faculty Glyphic", sans-serif;
+}
 
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -26,7 +30,7 @@ body.light-theme {
   background: var(--secondary-background-color);
 }
 
-body.dark-theme  {
+body.dark-theme {
   background: var(--background);
 }
 
@@ -34,7 +38,7 @@ body.dark-theme  {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Figtree', sans-serif;
+  font-family: var(--font-primary);
 }
 
 nav {
@@ -51,11 +55,11 @@ nav {
   align-items: center;
 }
 
-#light nav { 
+#light nav {
   background: var(--background);
 }
 
-#dark nav { 
+#dark nav {
   background: var(--secondary-background-color);
 }
 
@@ -63,7 +67,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .reactSwitch span {
@@ -78,9 +81,14 @@ nav {
   color: var(--font-color);
 }
 
+.landingImageClass {
+  width: 1000px;
+  height: 500px;
+}
+
 /* IMG LOGO AND AVATAR */
 
-.img-box { 
+.img-box {
   display: flex;
 }
 
@@ -97,7 +105,6 @@ nav {
   display: flex;
   position: absolute;
   right: 15px;
-
 }
 
 .img-box .avatarImg {
@@ -111,10 +118,10 @@ nav {
 
 .img-box .logoImg {
   margin-left: 25px;
-    margin-bottom: 1px;
-    width: 122px;
-    height: 67px;
-    border-radius: 50%;
+  margin-bottom: 1px;
+  width: 122px;
+  height: 67px;
+  border-radius: 50%;
 }
 
 .loginBtnClass button {
@@ -129,7 +136,7 @@ nav {
 #light .loginBtnClass button {
   background: var(--secondary-background-color);
   color: var(--font-color);
-  border: 2px solid var(--font-color)
+  border: 2px solid var(--font-color);
 }
 
 #dark .loginBtnClass button {
@@ -137,17 +144,16 @@ nav {
   color: var(--secondary-font-color);
 }
 
-
 #dark .loginBtnClass button:hover {
   background: var(--secondary-background-color);
   color: var(--font-color);
-  border: 2px solid var(--font-color)
+  border: 2px solid var(--font-color);
 }
 
 #light .loginBtnClass button:hover {
   background: var(--background);
   color: var(--secondary-font-color);
-  border: 2px solid var(--secondary-font-color)
+  border: 2px solid var(--secondary-font-color);
 }
 
 .loginContainer {
@@ -155,12 +161,21 @@ nav {
   border-radius: 20px;
   padding: 20px;
   box-shadow: 5px 5px 10px black;
+  margin: 20px auto 40px auto;
+}
+
+.loginContainer h2 {
+  font-size: 50px;
+}
+
+.loginContainer div {
+  margin: 20px;
 }
 
 #light .loginContainer {
   color: var(--secondary-font-color);
   background: var(--background);
-  border: none
+  border: none;
 }
 
 #dark .loginContainer {
@@ -171,7 +186,7 @@ nav {
 
 .loginContainer input {
   border: 2px solid var(--font-color);
-  color: var(--font-color)
+  color: var(--font-color);
 }
 
 .loginContainer button {
@@ -195,7 +210,6 @@ nav {
   color: var(--secondary-font-color);
 }
 
-
 #dark .loginContainer button:hover {
   color: var(--font-color);
   border: 2px solid var(--font-color);
@@ -208,12 +222,8 @@ nav {
   background: var(--background);
 }
 
-.loginContainer div {
-  margin-top: 10px;
-}
-
 .loginContainer label {
-  padding: 0 30px;
+  padding: 0 30px 0 0;
 }
 
 .loginContainer input {
@@ -224,8 +234,10 @@ nav {
 }
 
 .loginContainer span {
-  margin-left: 93px;
-  font-size: 18px;
+  margin-left: 60px;
+  font-size: 16px;
+  color: indianred;
+  font-weight: 700;
 }
 
 /* SPINNER */
@@ -241,7 +253,8 @@ nav {
   width: 50%;
   height: 150%;
   background: #474bff;
-  transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
+  transform: rotate(calc(var(--rotation) * 1deg))
+    translate(0, calc(var(--translation) * 1%));
   animation: spinner-fzua35 1s calc(var(--delay) * 1s) infinite ease;
 }
 
@@ -306,12 +319,23 @@ nav {
 }
 
 @keyframes spinner-fzua35 {
-  0%, 10%, 20%, 30%, 50%, 60%, 70%, 80%, 90%, 100% {
-     transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
+  0%,
+  10%,
+  20%,
+  30%,
+  50%,
+  60%,
+  70%,
+  80%,
+  90%,
+  100% {
+    transform: rotate(calc(var(--rotation) * 1deg))
+      translate(0, calc(var(--translation) * 1%));
   }
 
   50% {
-     transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1.5%));
+    transform: rotate(calc(var(--rotation) * 1deg))
+      translate(0, calc(var(--translation) * 1.5%));
   }
 }
 
@@ -320,7 +344,7 @@ nav {
 .productsContent {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 40px;
+  justify-content: center;
 }
 
 .productsContent img {
@@ -328,12 +352,54 @@ nav {
   cursor: pointer;
 }
 
+.productsContent p:last-child {
+  background-color: white;
+  overflow: hidden;
+  color: black;
+}
+
+#light .productsContent p:last-child {
+  background-color: black;
+  overflow: hidden;
+  color: white;
+}
+
+.productsContent p:nth-child(2) {
+  background-color: white;
+  color: black;
+  border-top: 1px solid black;
+  padding: 10px;
+}
+
+#light .productsContent p:nth-child(2) {
+  border-top: 1px solid black;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+.productsContent div {
+  border: 2px solid white;
+  margin: 15px;
+  border-radius: 20px;
+  width: 250px;
+  overflow: hidden;
+}
+
+#light .productsContent div {
+  border: 2px solid black;
+  margin: 15px;
+  border-radius: 20px;
+  width: 250px;
+  overflow: hidden;
+}
+
 .productsContent {
   margin-top: 50px;
 }
 
 #light .productsContent {
-  color: var(--font-color)
+  color: var(--font-color);
 }
 
 #dark .productsContent {
@@ -348,8 +414,19 @@ nav {
   color: var(--font-color);
 }
 
-.myProfileClass p {
-  padding: 10px;
+.myProfileClass strong {
+  padding-left: 30px;
+}
+
+.myProfileClass img {
+margin: 0 auto;
+}
+
+.myProfileClass span {
+  display: flex;
+  justify-content: left;
+
+  margin: 20px;
 }
 
 .myProfileClass button {
@@ -358,7 +435,7 @@ nav {
   border-radius: 20px;
   cursor: pointer;
   border: none;
-  margin-top: 80px;
+
   font-weight: 700;
 }
 
@@ -379,7 +456,32 @@ nav {
 #dark .myProfileClass button:hover {
   color: var(--secondary-font-color);
   background: var(--background);
-  border: 2px solid var(--secondary-font-color)
+  border: 2px solid var(--secondary-font-color);
+}
+
+.starsClass {
+  width: 30px;
+  height: 30px;
+}
+
+.ratingClass {
+  display: inline;
+
+}
+.progress-bar-container {
+  position: relative;
+  background: #ddd;
+  height: 15px;
+  width: 80%;
+  top: -60px;
+  left: 150px;
+  margin: 10px 0;
+}
+
+.progress-bar-filled {
+  position: absolute;
+  height: 100%;
+  background: blue;
 }
 
 .singleProductClass {
@@ -387,21 +489,31 @@ nav {
 }
 
 #light .singleProductClass {
-  color: var(--font-color)
+  color: var(--font-color);
 }
 
 #dark .singleProductClass {
   color: var(--secondary-font-color);
 }
 
-
 .singleProductClass p:nth-child(3) {
   text-align: center;
 }
 
 .singleProductClass p {
-  padding: 5px;
+  padding: 29px;
   text-align: left;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.singleProductClass h2 {
+  font-size: 45px;
+  padding-top: 50px;
+}
+
+.singleProductClass p span {
+  font-size: 20px;
 }
 
 .singleProductClass span {
@@ -453,7 +565,7 @@ nav {
   width: 200px;
   min-height: 100px;
   background: var(--secondary-background-color);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   opacity: 0;
   transform: translateY(-10px);
   visibility: hidden;
@@ -461,7 +573,7 @@ nav {
 }
 
 .menu::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -10px;
   right: 14px;
@@ -472,7 +584,7 @@ nav {
 }
 
 #light .menu::before {
-  background: #262bbd
+  background: #262bbd;
 }
 
 #dark .menu::before {
@@ -483,7 +595,6 @@ nav {
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
-
 }
 
 #light .menu.active {
@@ -527,10 +638,9 @@ ul li {
   color: var(--font-color);
 }
 
-
 /* PAGINATION */
 
-.paginationClass span{
+.paginationClass span {
   font-size: 18px;
   margin-right: 10px;
 }
@@ -553,6 +663,12 @@ ul li {
   font-weight: 700;
 }
 
+.paginationClass button:disabled {
+  background-color: #c0c0c0;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
 #light .paginationClass button {
   background: var(--background);
   color: var(--secondary-font-color);
@@ -567,7 +683,7 @@ ul li {
 #dark .paginationClass button:hover {
   background: var(--background);
   color: var(--secondary-font-color);
-  border: 1px solid white
+  border: 1px solid white;
 }
 
 #light .paginationClass button:hover {
@@ -578,23 +694,28 @@ ul li {
 
 /* SEARCH COMPONENT */
 
+.searchComponent {
+  position: relative;
+}
+
 .searchComponent input {
-  position: absolute;
-  left: 35px;
-  top: 92px;
+  margin: 70px auto;
+  width: 90%;
+  height: 50px;
   border-radius: 20px;
   border: none;
-  height: 25px;
   padding: 10px;
-  padding-left: 30px;
+  padding-left: 50px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 #dark .searchComponent input {
-  color: var(--font-color)
+  color: var(--font-color);
 }
 
 #light .searchComponent input {
-  border: 2px solid var(--font-color)
+  border: 2px solid var(--font-color);
 }
 
 .searchComponent input::placeholder {
@@ -602,9 +723,64 @@ ul li {
 }
 
 .searchIcon {
-  z-index: 10;
+  height: 20px;
   position: absolute;
-  left: 42px;
-  top: 97px;
-  width: 13px;
+  top: 85px;
+  left: 78px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 431px) {
+  body {
+
+    width: 100vw;
+  }
+
+  .landingImageClass {
+    width: 100%;
+    height: 100%;
+  }
+
+  .img-box .logoImg {
+    margin-left: 0;
+  }
+
+  .loginBtnClass button {
+    margin-right: 0;
+  }
+  .searchIcon {
+    left: 35px;
+  }
+
+  .myProfileClass strong {
+    padding-left: 0;
+  }
+  .singleProductClass p  {
+    padding: 20px;
+  }
+
+  .progress-bar-container {
+    width: 45%;
+  }
+
+}
+
+@media (max-width: 391px) {
+  .img-box .logoImg {
+    margin-left: 10px;
+  }
+
+  .loginBtnClass button {
+    margin-right: 10px;
+  }
+  .searchIcon {
+    left: 35px;
+  }
+
+  .progress-bar-container {
+    width: 45%;
+  }
+
 }

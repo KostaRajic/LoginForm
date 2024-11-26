@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-key */
-import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import { useContextAuth } from "../context/Context";
 
@@ -11,7 +10,6 @@ export const MyProfile = () => {
     // })
     
     const { state } = useContextAuth()
-    console.log('state' , state)
 
     const allowedKeys = [ 'image', 'username', 'firstName', 'lastName', 'email']
 
@@ -20,7 +18,7 @@ export const MyProfile = () => {
                     .filter(([key]) => allowedKeys.includes(key))
                     .map(([key, value]) => (
                         <span key={key}>
-                            { key === 'image' ? <img src={value} alt="User Image" /> : <div><strong>{key}:</strong> {value}</div>}
+                            { key === 'image' ? <img src={value} alt="User Image" /> : <div>{key}: <strong>{value}</strong></div>}
                         </span>
                     )) : ''}
             <button onClick={() => navigate(-1)}>Back</button>

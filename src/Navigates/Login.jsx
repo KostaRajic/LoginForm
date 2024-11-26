@@ -7,6 +7,8 @@ import { Spinner } from "../components/Spinner"
 export const Login = () => {
     const [username, setUsername] = useState('emilys')
     const [password, setPassword] = useState('emilyspass')
+    const [ wrongUsername, setWrongUsername ] = useState(false)
+    const [ wrongPassword, setWrongPassword ] = useState(false)
     const navigate = useNavigate()
     const { login, state, isAuthenticated } = useContextAuth()
 
@@ -22,7 +24,13 @@ export const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        login(username, password)
+        if (username == 'emilys' && password == 'emilyspass') {
+            login(username, password)
+        } else if (username !== 'emilys') {
+            setWrongUsername(true)
+        } else if (password !== 'emilyspass') {
+            setWrongPassword(true)
+        }
     }
 
     return (
@@ -30,13 +38,14 @@ export const Login = () => {
             <h2>Login</h2>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label>Username:</label>
+                    <label style={{marginRight: '-5px'}}>Username:</label>
                     <input 
                     type="text" 
                     value={username} 
                     onChange={(e) => setUsername(e.target.value)}
                     />
                 </div>
+                { wrongUsername ? <span>Wrong username!</span> : '' }
                 {!username && <span>Username is required</span>}
                 <div>
                     <label>Password:</label>
@@ -46,6 +55,7 @@ export const Login = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
+                { wrongPassword ? <span>Wrong password!</span> : ''}
                 {!password && <span>Password is required</span> ||
                 password.length < 6 && <span>Password must be minimum 6 characters long!</span>}
                 <br/>
