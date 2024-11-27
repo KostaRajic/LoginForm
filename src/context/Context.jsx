@@ -68,7 +68,8 @@ export const UseContextProvider = ({ children }) => {
   });
 
   const [landingImage, setLandingImage] = useState(() => {
-    return JSON.parse(localStorage.getItem("landingPage"));
+    const savedTheme = JSON.parse(localStorage.getItem("landingPage"));;
+    return savedTheme ? savedTheme : true;
   });
 
   const [state, dispatch] = useReducer(reducer, initialState);
