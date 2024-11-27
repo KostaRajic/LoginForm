@@ -445,7 +445,7 @@ nav {
 
 #dark .productsContent {
   color: var(--secondary-font-color);
-}
+} 
 
 #dark .myProfileClass {
   color: var(--secondary-font-color);
@@ -456,22 +456,21 @@ nav {
 }
 
 .myProfileClass strong {
-  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .myProfileClass img {
-margin: 0 auto;
+  margin: 0 auto;
 }
 
 .myProfileClass span {
-  display: flex;
-  justify-content: left;
 
   margin: 20px;
-
+}
 .myProfileClass p {
   padding: 10px;
-}
+  display: flex;
+  justify-content: left;
 }
 
 .myProfileClass button {
@@ -812,8 +811,12 @@ ul li {
   .loginBtnClass button {
     margin-right: 0;
   }
+
+  .searchComponent input {
+    width: 275px;
+  }
   .searchIcon {
-    left: 35px;
+    left: 47px;
   }
 
   .myProfileClass strong {
