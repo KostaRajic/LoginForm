@@ -1,30 +1,20 @@
-<<<<<<< HEAD
 /* eslint-disable react/jsx-key */
-=======
->>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState, Fragment } from "react";
 import { useContextAuth } from "../context/Context";
 import { Spinner } from "./Spinner";
 import { useNavigate, useParams } from "react-router-dom";
-<<<<<<< HEAD
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
-
-=======
->>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 
 export const SingleProducts = () => {
     const { state, dispatch } = useContextAuth()
     const [ product, setProduct ] = useState(null)
     const { productId } = useParams()
     const navigate = useNavigate()
-<<<<<<< HEAD
     const [starRating, setStarRating] = useState(5)
 
-=======
->>>>>>> 46ae12a624a837fa231610799c234841d37efa47
 
     useEffect(() => {
         async function getProducts() {
@@ -55,9 +45,7 @@ export const SingleProducts = () => {
         {product?.thumbnail ? <img src={product?.thumbnail} /> : null}
         <p>{product?.description}</p>
         {product?.brand ? <p>Brand: <span>{product?.brand}</span></p> : ''}
-<<<<<<< HEAD
-        <div>
-                
+        <div>    
         </div>
         <div className='ratingClass'>
         <p>Rating: </p>
@@ -69,10 +57,8 @@ export const SingleProducts = () => {
           </div>
           
         </div>
-        
-=======
+
         <p>Rating: <span>{product?.rating}</span></p>
->>>>>>> 46ae12a624a837fa231610799c234841d37efa47
         <p>Price: <span>{product?.price}</span></p>
         <button onClick={() => navigate(-1)}>Back</button>
     </Fragment> : null}
